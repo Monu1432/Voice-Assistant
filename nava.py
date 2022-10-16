@@ -73,8 +73,11 @@ while True:
         print(results)
         speak(results)
 
-    elif 'open youtube' in qurey:
-        webbrowser.open('youtube.com')
+     elif 'open youtube' in qurey:
+         #webbrowser.open('youtube.com')
+         youtube = takecommand('what do you want to search for?')
+         url = 'http://www.youtube.com/search?q=soccer ' + youtube
+         webbrowser.get().open(url)
 
     elif 'open google' in qurey:
         webbrowser.open('google.com')  
